@@ -2,14 +2,9 @@
 
 유연하고 안전한 소프트웨어를 만들기 교육을 위한 프로젝트 입니다. Java, Spring Boot, Mysql 을 활용 하여 기본적인 객체지향 설계, 아키텍처 설계, 유지 보수가 쉬운 단위 테스트와 인수 테스트를 실무에 제대로 적용 할 수 있도록 프로젝트를 구성했습니다. 쉽게 테스트를 진행하는 방법, 좋은 아키텍처에 대해 설명합니다.
 
-Spring boot - 3.3.1  
-JDK - 17  
-Mysql - 8.0.11
-
-# Overall Architecture
-
-![아키텍처](https://github.com/KanghoLee82/ch1_community_feed_service/assets/170936629/72712b3c-919f-405a-b22b-62ef6582729f)
-
+- Spring boot - 3.3.1
+- JDK - 17
+- Mysql - 8.0.11
 
 # Part 1
 

@@ -5,8 +5,8 @@ import java.util.Objects;
 public class User {
   private final Long id;
   private final UserInfo userInfo;
-  private final UserRelationCount followingCount;
-  private final UserRelationCount followerCount;
+  private final UserRelationCount followingCount; // 내가 팔로우하고 있는 카운트
+  private final UserRelationCount followerCount; // 나한테 얼마나 팔로워가 있는지 카운트
 
   public User(Long id, UserInfo userInfo) {
     if (userInfo == null) {
@@ -19,22 +19,22 @@ public class User {
     this.followerCount = new UserRelationCount();
   }
 
-  public void follow(User followee) {
-    if (this.equals(followee)) {
+  public void follow(User targetUser) {
+    if (this.equals(targetUser)) {
       throw new IllegalArgumentException("");
     }
 
     followingCount.increaseCount();
-    followee.increaseFollowerCount();
+    targetUser.increaseFollowerCount();
   }
 
-  public void unfollow(User followee) {
-    if (this.equals(followee)) {
+  public void unfollow(User targetUser) {
+    if (this.equals(targetUser)) {
       throw new IllegalArgumentException("");
     }
 
     followingCount.decreaseCount();
-    followee.decreaseFollowerCount();
+    targetUser.decreaseFollowerCount();
   }
 
   private void increaseFollowerCount() {
